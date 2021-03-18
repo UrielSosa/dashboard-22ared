@@ -1,4 +1,8 @@
 import React from 'react';
+import Card from './Card';
+import Category from './Category';
+import profile from './assets/images/dummy-avatar.jpg';
+import dummy from './assets/images/product_dummy.svg';
 
 const Main = () => {
     return (
@@ -33,7 +37,7 @@ const Main = () => {
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
 								<span className="mr-2 d-none d-lg-inline text-gray-600 small">Walter White</span>
-								<img className="img-profile rounded-circle" src="assets/images/dummy-avatar.jpg" width="60" alt="profile" />
+								<img className="img-profile rounded-circle" src={profile} width="60" alt="profile" />
 							</a>
 						</li>
 
@@ -100,74 +104,31 @@ const Main = () => {
 					</div>
 
 					<div className="row">
-						<div className="col-lg-6 mb-4">
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Last product in Data Dase</h6>
-								</div>
-								<div className="card-body">
-									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "25rem"}} src="assets/images/product_dummy.svg" alt="dummy" />
-									</div>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-									<a target="_blank" rel="nofollow" href="/">View product detail</a>
-								</div>
+						{/* Cards - prueba de childrens */}
+						
+						<Card
+							title="Last product in Data Dase"
+						>
+							<div className="text-center">
+								<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: "25rem"}} src={dummy} alt="dummy" />
 							</div>
-						</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
+							<a target="_blank" rel="nofollow" href="/">View product detail</a>
+						</Card>
 
-						<div className="col-lg-6 mb-4">						
-							<div className="card shadow mb-4">
-								<div className="card-header py-3">
-									<h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
-								</div>
-								<div className="card-body">
-									<div className="row">
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-info text-white shadow">
-												<div className="card-body">
-													Category 01
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-info text-white shadow">
-												<div className="card-body">
-													Category 02
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-info text-white shadow">
-												<div className="card-body">
-													Category 03
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-info text-white shadow">
-												<div className="card-body">
-													Category 04
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-info text-white shadow">
-												<div className="card-body">
-													Category 05
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6 mb-4">
-											<div className="card bg-info text-white shadow">
-												<div className="card-body">
-													Category 06
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+						<Card 
+							title="Categories in Data Base"
+						>
+							<div className="row">
+                        		<Category />
+                        		<Category />
+                        		<Category />
+                        		<Category />
+                        		<Category />
+                        		<Category />
 							</div>
-						</div>
+						</Card>
+						
 					</div>
 				</div>
 			</div>
