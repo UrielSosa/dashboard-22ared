@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-const Metrics = ({title}) => {
+const Metrics = ({title, total}) => {
     return (
         <>
             <div className="d-sm-flex align-items-center justify-content-between mb-4">
@@ -14,8 +14,8 @@ const Metrics = ({title}) => {
                     border="primary"
                     text="primary"
                     icon="fas fa-clipboard-list"
-                    title="Products in Data Base"
-                    value="135"
+                    title="La cantidad de notitas"
+                    value={total}
                 />
                 <Card 
                     border="success"
